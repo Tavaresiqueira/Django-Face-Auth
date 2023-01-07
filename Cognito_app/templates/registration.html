@@ -1,0 +1,52 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Registration|Face Auth </title>
+    <link rel="shortcut icon" href="{% static 'icons8-decentralized-network-50.png' %}" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'login.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/authentication/form-1.css' %}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/forms/theme-checkbox-radio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/forms/switches.css' %}">
+    
+</head>
+<main class="main">
+	<div class="container">
+		<section class="wrapper">
+			<div class="heading">
+				<h1 class="text text-large">Be Registrated</h1>
+                <p>Insert Email and Registree you Facial Biometric</p>
+				
+			</div>
+			<form name="signin" class="form" method="post">{% csrf_token %}
+				<div class="input-control">
+					<label for="email" class="input-label" hidden>Email Address</label>
+					<input type="email" name="email" id="email" class="input-field" placeholder="Email Address">
+				</div>
+                <div class="input-control">
+					<input type="button" id="take-photo-button" class="input-auth" value="Take Auth" >
+				</div>
+				
+				<div class="input-control">
+					<input type="submit" name="submit" class="input-submit" value="Registration">
+				</div>
+			</form>
+			
+		</section>
+	</div>
+</main>
+<script src="{% static 'jquery-3.1.1.min.js' %}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'CapUser.js' %}"></script>
+
+</html>

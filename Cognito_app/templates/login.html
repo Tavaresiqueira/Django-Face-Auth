@@ -1,0 +1,47 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Login|Face Auth </title>
+    <link rel="shortcut icon" href="{% static 'icons8-decentralized-network-50.png' %}" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'login.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'assets/css/authentication/form-1.css' %}" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/forms/theme-checkbox-radio.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/forms/switches.css' %}">
+    
+</head>
+<main class="main">
+	<div class="container">
+		<section class="wrapper">
+			<div class="heading">
+				<h1 class="text text-large">Sign In</h1>
+				<p class="text text-normal">New user? <a class="subMenu1" style="color:#0251D3;"  href="{% url 'registration' %}"><span class="subMenuHighlight">Registration</span> </a>
+				</p>
+			</div>
+           
+			<form name="signin" class="form">
+				<div class="input-control">
+					<label for="email" class="input-label" hidden>Email Address</label>
+					<input type="email" name="email" id="email" class="input-field" placeholder="Email Address">
+				</div>
+				
+				<div class="input-control">
+					<input type="submit" name="submit" class="input-submit" value="Sign In" disabled>
+				</div>
+			</form>
+			
+		</section>
+	</div>
+</main>
+
+<script src="{% static 'CapUser.js' %}"></script>
+</html>

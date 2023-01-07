@@ -24,7 +24,7 @@ S3_BUCKET_NAME = 'authetication-images'
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-8@gu_=q)a&bxbitfonc&(s5+3ay59bwxc)i%b#71a@vm8p38&c'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
